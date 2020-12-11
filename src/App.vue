@@ -1,28 +1,55 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <Offer /> -->
+    <ProductWindowFree />
+    <!-- <ProductWindowBusy /> -->
+    <!-- <PopupSell /> -->
+    <!-- <PopupNotEnoughMoney /> -->
+    <!-- <PopupSuccess /> -->
+    <!-- <PopupOperation /> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Offer from '@/components/Offer';
+import ProductWindowFree from '@/components/ProductWindowFree';
+import ProductWindowBusy from '@/components/ProductWindowBusy';
+import PopupSell from '@/components/PopupSell';
+import PopupNotEnoughMoney from '@/components/PopupNotEnoughMoney';
+import PopupSuccess from '@/components/PopupSuccess';
+import PopupOperation from '@/components/PopupOperation';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Offer,
+    ProductWindowFree,
+    PopupSell,
+    PopupNotEnoughMoney,
+    PopupSuccess,
+    PopupOperation,
+    ProductWindowBusy
   }
 }
 </script>
 
 <style lang="scss">
+body {
+  margin:0;
+  padding:0;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,p,span,ul,li {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
